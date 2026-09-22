@@ -66,3 +66,57 @@ Pump hydraulics tool — reads a line list and pump list, runs Darcy-Weisbach (C
 PSV sizing tool — API 520 Part I SI equations for gas (critical/subcritical), steam (with Napier correction), and liquid (iterative Kv viscosity correction), plus API 521 wetted-area fire load. Selects the API 526 orifice, reports utilisation, and marks the governing case per tag. The sample shows PSV-1001 governed by blocked outlet (K orifice) over fire (J), and flags PSV-4001 where back pressure makes a conventional valve unsuitable.
 
 Two cautions: the Kb/Kw back-pressure curves are linear approximations of the API figures and need vendor confirmation, and two-phase relief isn't covered. Both scripts are plain Python with openpyxl as the only dependency — swap in your project's velocity limits, Kd values, and motor tables at the top of each file.
+
+
+
+
+
+
+
+cost saving in project cycle
+
+
+
+AI saves money in a project mostly by cutting engineering hours, catching errors earlier (when they're cheap to fix), and shortening schedule — which drives down indirect costs, financing, and time-to-revenue. Here's where it hits across the lifecycle:
+
+FEED / Basic Engineering
+
+Faster option screening: run more process configurations and equipment sizing cases in the same time, so the selected concept is closer to optimal (lower CAPEX and OPEX locked in early)
+Automated datasheet and equipment list generation from HMB cuts man-hours by an estimated 30–50% on repetitive documents
+Better cost estimates: AI pulling from historical project data tightens ±30% estimates toward ±20%, reducing contingency
+
+Detailed Engineering
+
+Repetitive calcs (hydraulics, PSV, vessel sizing) scripted — like the tools built above — reduce hours and eliminate transcription errors between documents
+Automated cross-checks (P&ID ↔ line list ↔ datasheets ↔ 3D model) catch inconsistencies before IFC. Rework at drawing stage costs ~10× less than at construction
+Faster vendor document review: extract, compare, and flag deviations against datasheets instead of manual line-by-line review
+Fewer revision cycles → fewer man-hours and shorter schedule
+
+Procurement
+
+Bid tabulation and technical evaluation automated; deviation lists generated in hours instead of weeks
+Spec normalization across vendors improves comparison and negotiation leverage
+Predictive lead-time analysis flags long-lead items earlier, avoiding expediting premiums
+
+Construction & Pre-commissioning
+
+Auto-generated check sheets, test packs, and ITRs from P&IDs and the completions database
+Photo/punch-list classification and progress tracking reduce site engineering hours
+Predicting punch-item hotspots from past projects lets teams focus inspection where issues cluster
+
+Commissioning & Start-up
+
+Procedures drafted from P&IDs and operating philosophy, reviewed rather than written
+Digital twin / simulation-based operator training reduces start-up incidents and trips — a single day of delayed start-up on a large plant can cost more than the entire AI tooling investment
+
+Where the real money is
+
+Lever	Typical impact
+Engineering man-hours on repetitive tasks	20–40% reduction
+Rework from document inconsistency	Significantly reduced field change orders
+Schedule compression	Weeks to months on engineering phase
+Earlier start-up	Largest single value driver on most projects
+
+Engineering is only 8–15% of TIC, so hour savings alone are modest. The bigger wins come from fewer construction change orders, less contingency, and earlier first production — all consequences of getting the engineering right the first time and faster.
+
+Realistic caveats: numbers vary widely by project type and organizational maturity; the savings depend on having structured data (line lists, tag databases) to begin with, and on a review culture where engineers verify AI output rather than rubber-stamp it. Start with 2–3 high-volume workflows, measure hours saved, then scale.
