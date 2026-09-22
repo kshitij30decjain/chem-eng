@@ -54,3 +54,15 @@ Build a review gate: every AI output gets a checker's stamp, same as a junior en
 Quick wins are PDS/IPDS auto-population, P&ID consistency checks, and pre-commissioning document generation — high volume, low judgment. PSV scenario selection and exchanger design remain engineer-led with AI as assistant.
 
 If you'd like, I can build a working example — e.g., a Python tool that populates pump datasheets from a line list and runs the hydraulics, or an API 520 PSV sizing script.
+
+
+
+I'll build both as standalone Python tools with sample inputs so you can run them immediately.
+
+Both tools are built, run, and verified on sample data.
+
+Pump hydraulics tool — reads a line list and pump list, runs Darcy-Weisbach (Churchill friction factor) on suction and discharge lines, computes NPSHa, differential head, shaft power, and picks an IEC motor with API 610 margins. Output is an Excel workbook with a summary sheet plus one process datasheet per pump. On the sample data it flagged both suction lines at ~1.7 m/s (above the 1.5 m/s limit) — the kind of check that normally gets caught late.
+
+PSV sizing tool — API 520 Part I SI equations for gas (critical/subcritical), steam (with Napier correction), and liquid (iterative Kv viscosity correction), plus API 521 wetted-area fire load. Selects the API 526 orifice, reports utilisation, and marks the governing case per tag. The sample shows PSV-1001 governed by blocked outlet (K orifice) over fire (J), and flags PSV-4001 where back pressure makes a conventional valve unsuitable.
+
+Two cautions: the Kb/Kw back-pressure curves are linear approximations of the API figures and need vendor confirmation, and two-phase relief isn't covered. Both scripts are plain Python with openpyxl as the only dependency — swap in your project's velocity limits, Kd values, and motor tables at the top of each file.
