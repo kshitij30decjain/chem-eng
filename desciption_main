@@ -4,7 +4,13 @@ AI-Assisted Transfer of Licensor Process Data Sheets into Promec PDS
 (The title is kept short, since the guide recommends 8–10 words.)
 
 Which working step does the proposed AI use case address?
-Preparation of process datasheets for equipment and instruments, specifically the step where process data from the licensor’s Process Design Package is transferred into the Promec PDS format. This occurs mainly during Basic Engineering and FEED. It also covers updating the Promec PDS whenever the licensor issues revised datasheets with changed process conditions or equipment data.
+Preparation of process datasheets for equipment and instruments, specifically the 
+step where process data from the licensor’s Process Design Package is transferred into 
+the Promec PDS format. This occurs mainly during Basic Engineering and FEED. It also covers 
+updating the Promec PDS whenever the licensor issues revised datasheets with changed process conditions or equipment data.
 
 Describe the proposed AI solution:
-Engineers currently enter licensor PDS data into Promec manually, field by field, handling different formats, units, and terminology. This is slow and error-prone. AI would extract the data, map it to Promec fields, convert units, and generate a pre-filled draft. It would flag missing or unclear values and highlight revision changes. The process engineer then verifies the draft before issue.
+Engineers currently enter licensor PDS data into Promec manually, field by field, handling different formats, 
+units, and terminology. This is slow and error-prone. AI would extract the data, map it to Promec fields, convert 
+units, and generate a pre-filled draft. It would flag missing or unclear values and highlight revision changes. 
+The process engineer then verifies the draft before issue.
