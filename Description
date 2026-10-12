@@ -1,0 +1,30 @@
+Title of your proposed AI use case:
+AI-Assisted Transfer of Licensor Process Data Sheets into Promec PDS
+
+(Alternative: Automated Population of Promec PDS from Licensor Datasheets)
+
+Which working step does the proposed AI use case address?
+Preparation of process datasheets (PDS) for equipment and instruments, specifically the step 
+where process data from the licensor’s Process Design Package (for example, licensor PDS for 
+vessels, columns, heat exchangers, pumps, and compressors) is transferred into the company’s Promec PDS format. 
+This takes place mainly during the Basic Engineering / FEED phase. It also applies whenever revised licensor datasheets 
+require updates to the Promec PDS.
+
+Describe the proposed AI solution:
+
+Current situation: Process engineers read each licensor PDS, which usually comes as a PDF in the licensor’s 
+own layout, units, and terminology. They then manually enter the data field by field into the corresponding Promec PDS. 
+This data includes operating and design conditions, fluid properties, flow rates, materials, nozzle data, and notes.
+
+Pain point: The work is repetitive and time-consuming, especially on projects with a large number of datasheets. Licensor formats, 
+units, and terminology differ from Promec, so engineers have to convert units and map fields. Manual transcription can introduce typing 
+errors, missed values, or inconsistent units. When the licensor issues a new revision, the changes have to be found and re-entered by hand.
+
+Proposed AI support: An AI tool would read the licensor PDS (including scanned or non-standard PDFs) and extract the relevant parameters. 
+It would map them to the matching Promec PDS fields, apply unit conversions, and generate a pre-filled Promec PDS draft. The tool would 
+flag fields that are missing, ambiguous, or could not be confidently mapped, and link each value back to its location in the source document 
+for traceability. When a licensor revision is issued, the AI would compare it with the previous version and highlight only the changed values to update.
+
+Role of the engineer: The responsible process engineer reviews and verifies the pre-filled draft and fills in flagged or missing items. 
+The engineer also applies engineering judgement where licensor data needs interpretation, such as design margins or project-specific requirements, 
+before the Promec PDS is issued.
